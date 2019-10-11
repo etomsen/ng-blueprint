@@ -1,0 +1,7 @@
+<button *ngFor="let i of items" (click)="activateItem(i)">
+  {{i.title}}
+</button>
+<ng-container *ngFor="let i of items">
+  <div *ngIf="i.active" [ngTemplateOutlet]="i.blueprint">
+  </div>
+</ng-container>
